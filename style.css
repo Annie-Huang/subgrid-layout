@@ -41,48 +41,13 @@ h2 span {
 
 .main-grid {
   display: grid;
-  gap: 0 1rem;
   grid-template-columns: 1rem 1fr 1rem;
 }
 
 .main-grid > * {
   grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: subgrid;
 }
 
-@media (max-width: 650px) {
-  .main-grid > * > * {
-    grid-column: 2/-2;
-  }
-}
-@media (min-width: 650px) {
-  .main-grid {
-    grid-template-columns: minmax(1rem, 1fr) repeat(6, minmax(5rem, 10rem)) minmax(1rem, 1fr);
-  }
-
-  .even-columns {
-    --col-start: 2;
-    --col-end: calc(var(--col-start) * -1);
-    --col-size: 2;
-  }
-
-  .even-columns > * {
-    grid-column-start: span var(--col-size);
-  }
-
-  .even-columns > *:first-child {
-    grid-column: var(--col-start)/span var(--col-size);
-  }
-
-  .even-columns > *:last-child {
-    grid-column: span var(--col-size)/var(--col-end);
-  }
-
-  .even-columns > *:only-child {
-    grid-column: var(--col-start)/var(--col-end);
-  }
-}
 .full-split {
   --col-start: 1;
   --col-end: -1;
