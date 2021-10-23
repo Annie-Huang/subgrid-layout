@@ -101,6 +101,10 @@ h2 span {
   --col-start: 3;
 }
 
+.full-split {
+  gap: 0;
+}
+
 .full-split > * {
   --col-start: 1;
   --col-width: 4;
@@ -139,6 +143,7 @@ h2 span {
 .v-center {
   display: grid;
   align-items: center;
+  margin: 0;
 }
 
 .bg-dark {
