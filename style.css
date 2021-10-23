@@ -57,7 +57,25 @@ h2 span {
   }
 }
 @media (min-width: 650px) {
+  /*  .even-columns {
+      --col-start: 2;
+      --col-end: calc(var(--col-start) * -1);
+      --col-size: 2;
+    }
+  */
   .even-columns > * {
+    grid-column: span var(--col-width);
+  }
+
+  .even-columns > *:first-child {
+    grid-column: 2/span var(--col-width);
+  }
+
+  .even-columns > *:last-child {
+    grid-column: span var(--col-width)/-2;
+  }
+
+  .even-columns > *:only-child {
     grid-column: span var(--col-width);
   }
 
@@ -68,27 +86,6 @@ h2 span {
   .three-columns {
     --col-width: calc(var(--column-count) / 3);
   }
-
-  /*  .even-columns {
-    --col-start: 2;
-    --col-end: calc(var(--col-start) * -1);
-    --col-size: 2;
-  }
-
-  .even-columns > * {
-    grid-column-start: span var(--col-size);
-  }
-  .even-columns > *:first-child {
-    grid-column: var(--col-start) / span var(--col-size);
-  }
-
-  .even-columns > *:last-child {
-    grid-column: span var(--col-size) / var(--col-end);
-  }
-
-  .even-columns > *:only-child {
-    grid-column: var(--col-start) / var(--col-end);
-  }*/
 }
 .full-split {
   --col-start: 1;
