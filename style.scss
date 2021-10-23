@@ -93,11 +93,13 @@ h2 {
     grid-column: span var(--col-width);
   }
   .even-columns > *:first-child {
-    grid-column: 2 / span var(--col-width);
+    //grid-column: 2 / span var(--col-width);
+    grid-column: var(--col-start, 2) / span var(--col-width);
   }
 
   .even-columns > *:last-child {
-    grid-column: span var(--col-width) / -2;
+    //grid-column: span var(--col-width) / -2;
+    grid-column: span var(--col-width) / calc(var(--col-start, 2) * -1);
   }
 
   .even-columns > *:only-child {
@@ -112,6 +114,19 @@ h2 {
     //--col-width: 2;
     --col-width: calc(var(--column-count) / 3);
   }
+}
+//.more-stuff {
+//  text-align: center;
+//  --col-start: 3;
+//  --col-size: 2;
+//  padding: 3rem 0;
+//}
+
+.more-stuff {
+  text-align: center;
+  --col-width: 2;
+  --col-start: 3;
+  padding: 3rem 0;
 }
 
 .full-split {
@@ -184,13 +199,6 @@ h2 {
   padding: 3rem 0;
   background: #efefef;
   text-align: center;
-}
-
-.more-stuff {
-  text-align: center;
-  --col-start: 3;
-  --col-size: 2;
-  padding: 3rem 0;
 }
 
 .cta {
