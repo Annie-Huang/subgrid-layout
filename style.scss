@@ -102,9 +102,9 @@ h2 {
     grid-column: span var(--col-width) / calc(var(--col-start, 2) * -1);
   }
 
-  .even-columns > *:only-child {
-    grid-column: span var(--col-width);
-  }
+  //.even-columns > *:only-child {
+  //  grid-column: span var(--col-width);
+  //}
 
   .two-columns {
     //--col-width: 3;
@@ -127,6 +127,18 @@ h2 {
   --col-width: 2;
   --col-start: 3;
   padding: 3rem 0;
+}
+
+
+.cta {
+  background: #222;
+  padding: 3em 0;
+  text-align: center;
+  color: #f4f4f4;
+  column-gap: 1em;
+
+  --col-width: 4;
+  --col-start: 3;
 }
 
 .full-split {
@@ -199,14 +211,6 @@ h2 {
   padding: 3rem 0;
   background: #efefef;
   text-align: center;
-}
-
-.cta {
-  background: #222;
-  padding: 3em 0;
-  text-align: center;
-  color: #f4f4f4;
-  column-gap: 1em;
 }
 
 .v-center {
