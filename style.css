@@ -56,6 +56,40 @@ h2 span {
     grid-column: 2/-2;
   }
 }
+@media (min-width: 650px) {
+  .even-columns > * {
+    grid-column: span var(--col-width);
+  }
+
+  .two-columns {
+    --col-width: 2;
+  }
+
+  .three-columns {
+    --col-width: 3;
+  }
+
+  /*  .even-columns {
+    --col-start: 2;
+    --col-end: calc(var(--col-start) * -1);
+    --col-size: 2;
+  }
+
+  .even-columns > * {
+    grid-column-start: span var(--col-size);
+  }
+  .even-columns > *:first-child {
+    grid-column: var(--col-start) / span var(--col-size);
+  }
+
+  .even-columns > *:last-child {
+    grid-column: span var(--col-size) / var(--col-end);
+  }
+
+  .even-columns > *:only-child {
+    grid-column: var(--col-start) / var(--col-end);
+  }*/
+}
 .full-split {
   --col-start: 1;
   --col-end: -1;
