@@ -62,11 +62,11 @@ h2 span {
   }
 
   .two-columns {
-    --col-width: 2;
+    --col-width: calc(var(--column-count) / 2);
   }
 
   .three-columns {
-    --col-width: 3;
+    --col-width: calc(var(--column-count) / 3);
   }
 
   /*  .even-columns {
