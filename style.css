@@ -101,22 +101,10 @@ h2 span {
   --col-start: 3;
 }
 
-.full-split {
-  --col-start: 1;
-  --col-end: -1;
-  --col-size: 4;
-  gap: 0;
-}
-
 .full-split > * {
+  --col-start: 1;
+  --col-width: 4;
   grid-column: 1/-1;
-}
-
-.full-split > *:not(img) {
-  background: #111;
-  color: white;
-  padding: 3rem;
-  margin: 0;
 }
 
 .full-split > img {
@@ -151,6 +139,15 @@ h2 span {
 .v-center {
   display: grid;
   align-items: center;
+}
+
+.bg-dark {
+  background: black;
+  color: white;
+}
+
+.p-3 {
+  padding: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
