@@ -44,14 +44,23 @@ h2 {
 .main-grid {
   display: grid;
   //gap: 0 1rem;
-  grid-template-columns: 1rem 1fr 1rem;
+
+  //grid-template-columns: 1rem 1fr 1rem;
+
+  // We are using the 1fr on each size as a container margin-left and margin-right
+  // the 60rem is not going to kick in until the size is 1fr on each side.
+  grid-template-columns: minmax(1rem, 1fr) minmax(0, 60rem) minmax(1rem, 1fr);
 }
 
 .main-grid > * {
   grid-column: 1 / -1;
 
-  //display: grid;
-  //grid-template-columns: subgrid;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.main-grid > * > * {
+  grid-column: 2 / -2;
 }
 
 //@media (max-width: 650px) {
